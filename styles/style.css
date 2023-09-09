@@ -10,7 +10,7 @@ html {
 
 .page {
   inline-size: 1200px;
-  max-height: 600px;
+  max-height: 800px;
   block-size: 100%;
   margin: auto;
   color: #fff;
@@ -48,6 +48,7 @@ ol {
   gap: 30px;
   width: 1140px;
   margin: auto;
+  margin-top: 100px;
 }
 
 .result {
