@@ -17,7 +17,6 @@ html {
   font-size: 18px;
   background-color: #1b1919;
   margin-top: 133px;
-  display: flex;
 }
 
 h1,
@@ -46,7 +45,7 @@ ol {
   align-items: flex-end;
   gap: 30px;
   width: 1140px;
-  margin: 171px 30px;
+  margin: 133px 30px;
 }
 
 .result {
