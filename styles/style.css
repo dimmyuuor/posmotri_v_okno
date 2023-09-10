@@ -10,14 +10,14 @@ html {
 
 .page {
   inline-size: 1200px;
-  max-height: 800px;
   block-size: 100%;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  margin-top: 133px;
+  justify-content: center;
+  align-items: center;
   display: flex;
 }
 
@@ -48,12 +48,9 @@ ol {
   gap: 30px;
   width: 1140px;
   margin: auto;
-  margin-top: 100px;
 }
 
 .result {
-  width: 711px;
-  height: 456px;
   display: grid;
   align-items: end;
 }
@@ -79,8 +76,8 @@ ol {
 }
 
 .search-form__fieldset-title {
-  color: #FFF;
-  font-family: 'Fira Sans Condensed';
+  color: #fff;
+  font-family: 'Fira Sans Condensed', Arial, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -92,6 +89,9 @@ ol {
   display: flex;
   width: fit-content;
   align-items: center;
+}
+
+.search-form__label:not(:last-child) {
   margin-right: 15px;
 }
 
@@ -113,18 +113,18 @@ ol {
 .search-form__textfield {
   appearance: none;
   color: rgba(255, 255, 255, 0.70);
-  border-bottom: 1px solid #fff;
-  border-top: 1px solid #fff;
+  border-bottom: 1px solid currentColor;
+  border-top: 1px solid currentColor;
   border-right: none;
   border-left: none;
   background: transparent;
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', Arial, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  width: 225px;
-  height: 27px;
+  min-width: 225px;
+  min-height: 27px;
 }
 
 .search-form__textfield:active {
@@ -138,6 +138,8 @@ ol {
   border: 1px solid #fff;
   cursor: pointer;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
@@ -145,9 +147,7 @@ ol {
   width: 15px;
   height: 15px;
   background-color: #fff;
-  display: inline-block;
-  margin-top: 1px;
-  margin-left: 1px;
+  display: block;
   cursor:pointer;
   display: flex;
 }
@@ -163,44 +163,33 @@ ol {
 }
 
 .search-form__submit-button {
-  cursor: pointer;
   padding: 6px 73.5px;
-  background:transparent;
-  color: #fff;
   text-align: center;
-  font-family: 'Fira Sans Condensed';
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  display: flex;
   align-self: end;
   width: 194px;
   height: 34px;
   outline: none;
-  border: none;
 }
 
 .more-button {
-  cursor: pointer;
-  background: transparent;
-  color: #fff;
-  font-family: 'Fira Sans Condensed';
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  display: flex;
   width: 399px;
   height: 34px;
   justify-content: center;
   align-items: center;
   margin-top: 32px;
-  border: none;
 }
 
 .button {
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
+  cursor: pointer;
+  background:transparent;
+  color: #fff;
+  font-family: 'Fira Sans Condensed', Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: flex;
 }
 
 .content__list {
@@ -223,13 +212,11 @@ ol {
   margin-bottom: 30px;
 }
 
-.content__list-item:focus {
-  outline: none;
-}
-
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .content__video-card-description-container {
@@ -238,7 +225,7 @@ ol {
 
 .title {
   color: #FFF;
-  font-family: 'Oswald';
+  font-family: 'Oswald', Arial, sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -249,12 +236,6 @@ ol {
 
 .content__accent {
   color: #545050;
-  font-family: 'Oswald';
-  font-size: 75px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 94%; 
-  text-transform: uppercase;
 }
 
 .content__card-link {
@@ -266,7 +247,7 @@ ol {
 
 .content__video-card-title {
   color: #FFF;
-  font-family: 'Oswald';
+  font-family: 'Oswald', Arial, sans-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
@@ -275,7 +256,7 @@ ol {
 
 .content__video-card-description {
   color: #fff;
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', Arial, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -301,9 +282,12 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
-.more-button:focus-visible {
-  outline: 1px solid #fff;
-  outline-offset: -3px;
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:focus-visible {
+  background-color: #545050;
 }
 
 button:active {
@@ -326,7 +310,4 @@ button:hover {
   text-decoration: underline;
 }
 
-.content__list-item:not(:last-child):active {
-  background-color: #545050;
-}
 
