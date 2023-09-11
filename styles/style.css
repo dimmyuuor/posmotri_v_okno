@@ -16,8 +16,6 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  justify-content: center;
-  align-items: center;
   display: flex;
 }
 
@@ -43,7 +41,6 @@ ol {
 
 .content {
   display: flex;
-  justify-content: center;
   align-items: flex-end;
   gap: 30px;
   width: 1140px;
@@ -112,7 +109,7 @@ ol {
 
 .search-form__textfield {
   appearance: none;
-  color: rgba(255, 255, 255, 0.70);
+  color: #fff;
   border-bottom: 1px solid currentColor;
   border-top: 1px solid currentColor;
   border-right: none;
@@ -167,13 +164,11 @@ ol {
   text-align: center;
   align-self: end;
   width: 194px;
-  height: 34px;
   outline: none;
 }
 
 .more-button {
   width: 399px;
-  height: 34px;
   justify-content: center;
   align-items: center;
   margin-top: 32px;
@@ -190,12 +185,14 @@ ol {
   font-weight: 700;
   line-height: normal;
   display: flex;
+  height: 34px;
 }
 
 .content__list {
-  height: 290px;
+  height: 321px;
   overflow: auto;
   position: relative;
+  padding-top: 20px;
 }
 
 .content__details {
@@ -231,7 +228,6 @@ ol {
   font-weight: 700;
   line-height: 94%;
   text-transform: uppercase;
-  padding-bottom: 26px;
 }
 
 .content__accent {
@@ -286,8 +282,13 @@ button:focus-visible {
   background-color: #545050;
 }
 
+.content__card-link:focus {
+  outline: none;
+}
+
 .content__card-link:focus-visible {
   background-color: #545050;
+  outline: 1px solid #fff;
 }
 
 button:active {
@@ -309,5 +310,4 @@ button:hover {
 .search-form__label:has(.search-form__checkbox):hover {
   text-decoration: underline;
 }
-
 
