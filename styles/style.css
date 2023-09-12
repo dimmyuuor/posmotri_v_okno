@@ -202,7 +202,7 @@ ol {
 
 .content__video-card {
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
 }
 
 .content__list-item:not(:last-child) {
@@ -214,10 +214,6 @@ ol {
   height: 103px;
   object-fit: cover;
   object-position: center;
-}
-
-.content__video-card-description-container {
-  width: 100%;
 }
 
 .title {
@@ -287,7 +283,6 @@ button:focus-visible {
 }
 
 .content__card-link:focus-visible {
-  background-color: #545050;
   outline: 1px solid #fff;
 }
 
@@ -310,4 +305,3 @@ button:hover {
 .search-form__label:has(.search-form__checkbox):hover {
   text-decoration: underline;
 }
-
